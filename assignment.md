@@ -23,6 +23,8 @@ Answer:
 
 ```python
 
+df[(df>threshold).any(axis=1)]
+
 ```
 
 ### Question 2
@@ -38,7 +40,7 @@ df = pd.DataFrame({'A': [2, 1, 2], 'B': [2, 3, 1], 'C': [1, 2, 3]})
 Answer:
 
 ```python
-
+df.sort_values(["A", "B"])
 ```
 
 ### Question 3
@@ -55,6 +57,7 @@ df2 = pd.DataFrame({'A': [7, 8, 9], 'B': [10, 11, 12]})
 Answer:
 
 ```python
+pd.concat([df1,df2], axis = 0, ignore_index= True)
 
 ```
 
@@ -71,6 +74,7 @@ df = pd.DataFrame({'A': [1, 2, 3, 4, 5]})
 Answer:
 
 ```python
+df["A"].cumsum()
 
 ```
 
@@ -87,6 +91,7 @@ series = pd.Series(['apple', 'banana', 'cherry'])
 Answer:
 
 ```python
+series.str.upper()
 
 ```
 
